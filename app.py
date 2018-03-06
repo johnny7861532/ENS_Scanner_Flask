@@ -9,7 +9,6 @@ Created on Mon Mar  5 13:43:03 2018
 from flask import Flask, render_template, flash, request
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 from ENS import check
-import setuptools
 DEBUG = False
 app = Flask(__name__)
 app.config.from_object(__name__)
