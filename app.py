@@ -11,7 +11,6 @@ from wtforms import Form, TextField, TextAreaField, validators, StringField, Sub
 from ENS import check
 import os
 port = int(os.environ.get("PORT", 33507))
-app.run(host='0.0.0.0', port = port ,debug=True)
 DEBUG = False
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -70,4 +69,4 @@ def get_ENS():
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', debug=True)
+    app.run(host='0.0.0.0', debug=True)
