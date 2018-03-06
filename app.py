@@ -10,7 +10,6 @@ from flask import Flask, render_template, flash, request
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 from ENS import check
 import os
-port = int(os.environ.get("PORT", 33507))
 DEBUG = False
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -69,4 +68,5 @@ def get_ENS():
 
 
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 33507))
     app.run(host='0.0.0.0', debug=True)
